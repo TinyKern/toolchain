@@ -7,5 +7,5 @@ TARGET			:= i386-elf-tinykernel
 install:
 	tar xvf $(CROSS_PREFIX)/binutils-$(BINUTILS_VERSION).tar.gz
 	tar xvf $(CROSS_PREFIX)/gcc-$(GCC_VERSION).tar.gz
-	make -C build-binutils install
-	make -C build-gcc install
+	make -f build-binutils/make install
+	make -f build-gcc/make install
