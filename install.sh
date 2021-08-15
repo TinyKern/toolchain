@@ -1,3 +1,3 @@
 #!/bin/sh
 
-make -f build_binutils/make
+make -f build-binutils/make
