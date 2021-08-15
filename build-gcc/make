@@ -6,6 +6,8 @@ install:
 	@echo "======================="
 	@echo "=    Installing gcc   ="
 	@echo "======================="
+	wget https://ftp.gnu.org/gnu/gcc/gcc-$(GCC_VERSION)/gcc-$(GCC_VERSION).tar.gz -O $(CROSS_PREFIX)/gcc-$(GCC_VERSION).tar.gz
+	tar xvf $(CROSS_PREFIX)/gcc-$(GCC_VERSION).tar.gz -C $(CROSS_PREFIX)
 	$(CROSS_PREFIX)/gcc-$(GCC_VERSION)/configure --prefix="$(CROSS_PREFIX)" --target=$(TARGET) --disable-nls --enable-languages=c,c++ --without-headers;
 	make -j$(CORES) all-gcc;
 	make -j$(CORES) all-target-libgcc;

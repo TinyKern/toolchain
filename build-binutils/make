@@ -6,7 +6,8 @@ install:
 	@echo "======================="
 	@echo "= Installing binutils ="
 	@echo "======================="
-	@mkdir -p $(CROSS_PREFIX)/build-binutils
+	wget https://ftp.gnu.org/gnu/binutils/binutils-$(BINUTILS_VERSION).tar.gz -O $(CROSS_PREFIX)/binutils-$(BINUTILS_VERSION).tar.gz
+	tar xvf $(CROSS_PREFIX)/binutils-$(BINUTILS_VERSION).tar.gz -C $(CROSS_PREFIX)
 	$(CROSS_PREFIX)/binutils-$(BINUTILS_VERSION)/configure --prefix="$(CROSS_PREFIX)" --target=$(TARGET) --with-sysroot --disable-werror --disable-nls;
 	make -j$(CORES);
 	make install
