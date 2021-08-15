@@ -1,6 +1,6 @@
 BINUTILS_VERSION:= 2.37
 CROSS_PREFIX 	:= $(HOME)/.local/bin/TinyKernel-Toolchain
-TARGET			:= i386
+TARGET			:= i386-elf
 
 install:
 	@echo "======================="
