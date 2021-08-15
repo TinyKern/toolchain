@@ -1,7 +1,7 @@
 BINUTILS_VERSION:= 2.37
 GCC_VERSION		:= 11.2.0
 CROSS_PREFIX 	:= ~/.local/bin/TinyKernel-Toolchain
-TARGET			:= i386-elf-tinykernel
+TARGET			:= i386-elf
 
 .PHONY: install
 install:

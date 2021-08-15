@@ -1,6 +1,6 @@
 GCC_VERSION		:= 11.2.0
 CROSS_PREFIX 	:= $(HOME)/.local/bin/TinyKernel-Toolchain
-TARGET			:= i386-elf-tinykernel
+TARGET			:= i386-elf
 
 install:
 	@echo "======================="
