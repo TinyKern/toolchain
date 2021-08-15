@@ -6,7 +6,7 @@ install:
 	@echo "======================="
 	@echo "=    Installing gcc   ="
 	@echo "======================="
-	../$(GCC_VERSION)/configure --prefix="$(CROSS_PREFIX)" --target=$(TARGET) --disable-nls --enable-languages=c,c++ --without-headers;
+	../gcc-$(GCC_VERSION)/configure --prefix="$(CROSS_PREFIX)" --target=$(TARGET) --disable-nls --enable-languages=c,c++ --without-headers;
 	make -j$(CORES) all-gcc;
 	make -j$(CORES) all-target-libgcc;
 	make install-gcc
